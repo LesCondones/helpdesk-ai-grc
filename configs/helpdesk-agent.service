@@ -1,0 +1,24 @@
+[Unit]
+Description=Help Desk AI Agent
+# GRC: NIST 800-53 CP-10, SI-2
+After=network.target ollama.service
+Requires=ollama.service
+
+[Service]
+Type=simple
+User=grcadmin
+WorkingDirectory=/home/grcadmin/helpdesk-agent
+ExecStart=/home/grcadmin/helpdesk-agent/.venv/bin/streamlit run app.py --server.port 8501 --server.address 0.0.0.0
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+Environment=OLLAMA_HOST=http://127.0.0.1:11434
+
+# Security hardening — NIST 800-53 SC-39, AC-6
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/home/grcadmin/helpdesk-agent
+
+[Install]
+WantedBy=multi-user.target
