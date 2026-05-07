@@ -245,11 +245,11 @@ store query fails silently or produces degraded results.
 | MAP-009 | Denial of service via ticket flooding | No rate limiting | OWASP LLM04 | Medium | High | 🟠 High |
 | MAP-011 | Hallucinated policy guidance | Model behavior | OWASP LLM02 | Medium | High | 🟠 High |
 | MAP-005 | RAG poisoning via modified docs | FAISS index | MITRE AML.T0020 | Low | High | 🟠 High |
-| MAP-007 | Pipeline crash from malformed output | JSON parsing | OWASP LLM02 | Medium | Medium | 🟡 Medium |
+| MAP-007 | Pipeline crash from malformed output | JSON parsing + retry logic | OWASP LLM02 | Medium | Medium | ✅ Mitigated |
 | MAP-002 | Jailbreak attempt | User input | OWASP LLM01 | Medium | Medium | 🟡 Medium |
 | MAP-010 | Resource exhaustion crashing Ollama | No rate limiting | OWASP LLM04 | Medium | High | 🟠 High |
 | MAP-006 | Knowledge base integrity loss | FAISS index | NIST 800-53 SI-7 | Low | High | 🟠 High |
-| MAP-008 | Silent data corruption from bad JSON | JSON parsing | OWASP LLM02 | Medium | Medium | 🟡 Medium |
+| MAP-008 | Silent data corruption from bad JSON | Fallback defaults + retry | OWASP LLM02 | Medium | Medium | ✅ Mitigated |
 | MAP-012 | Overconfident response on unknown issues | Model behavior | AI RMF GOVERN G2 | Medium | Medium | 🟡 Medium |
 | MAP-013 | RAG failure from missing embedding model | Dependency | NIST 800-53 CP-10 | Low | High | 🟡 Medium |
 | MAP-003 | Social engineering via crafted ticket | User input | MITRE AML.T0051 | Medium | Medium | 🟡 Medium |
