@@ -90,7 +90,7 @@ SANS policy documents:
 
 ```
 Known-good FAISS index hash (2026-05-07):
-576c655ff726774ebf99c72f3dd22b452a8f4c8c00680e4d32a6a6b51422dd58
+<REDACTED - store securely outside version control>
 ```
 
 **This hash must be stored securely and compared against on every deployment.**
@@ -107,7 +107,7 @@ cd ~/helpdesk-agent
 Run the following command to verify the vector store has not been tampered with:
 
 ```bash
-EXPECTED="576c655ff726774ebf99c72f3dd22b452a8f4c8c00680e4d32a6a6b51422dd58"
+EXPECTED="<REDACTED - store securely outside version control>"
 ACTUAL=$(.venv/bin/python3 -c "from rag import get_index_hash; print(get_index_hash())")
 if [ "$EXPECTED" = "$ACTUAL" ]; then
   echo "[PASS] FAISS index integrity verified"
