@@ -16,40 +16,7 @@ The agent uses a LangGraph multi-agent pipeline with FAISS RAG over SANS securit
 
 ## 🏗️ Architecture
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                    Ubuntu 24.04 LTS Server                    │
-│                   (VMware Fusion / aarch64)                   │
-│                                                               │
-│  ┌──────────────────────────────────────────────────────┐    │
-│  │              Help Desk AI Agent (Streamlit :8501)     │    │
-│  │                                                       │    │
-│  │   User Input                                          │    │
-│  │       │                                               │    │
-│  │  sanitize_input()  ←── OWASP LLM01 control           │    │
-│  │       │                                               │    │
-│  │  START ─┬──> classifier ──┐                          │    │
-│  │         │                 ├──> researcher             │    │
-│  │         └──> summarizer ──┘    (FAISS RAG)           │    │
-│  │                    │                                  │    │
-│  │              recommender                              │    │
-│  │                    │                                  │    │
-│  │              synthesizer ──> Response                 │    │
-│  └──────────────────────────────────────────────────────┘    │
-│                          │                                    │
-│              Ollama API (127.0.0.1:11434)                     │
-│                          │                                    │
-│                    ┌─────────┐                                │
-│                    │ Gemma 4 │  8B params, Q4_K_M             │
-│                    │ (local) │  131K context                  │
-│                    └─────────┘                                │
-│                                                               │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────────┐  │
-│  │  Ollama  │  │   UFW    │  │  auditd  │  │  fail2ban  │  │
-│  │  gemma4  │  │Firewall  │  │ 13 rules │  │  sshd jail │  │
-│  └──────────┘  └──────────┘  └──────────┘  └────────────┘  │
-└──────────────────────────────────────────────────────────────┘
-```
+![System Architecture](docs/architecture.svg)
 
 **Stack:**
 - OS: Ubuntu 24.04.4 LTS (aarch64)
