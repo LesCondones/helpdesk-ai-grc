@@ -38,7 +38,6 @@ potential impact on the organization and its users?*
 
 ### System Boundary
 
-```
 ```mermaid
 graph TB
     subgraph BOUNDARY["🔐 System Boundary — Ubuntu 24.04 LTS Server"]
