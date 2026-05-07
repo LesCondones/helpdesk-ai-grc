@@ -39,23 +39,56 @@ potential impact on the organization and its users?*
 ### System Boundary
 
 ```
-[User] --> [Streamlit UI :8501] --> [LangGraph Pipeline]
-                                         |
-                    ┌────────────────────┼────────────────────┐
-                    |                    |                    |
-              [Classifier]        [Summarizer]         [Researcher]
-              (Gemma 4)           (Gemma 4)            (FAISS RAG)
-                    |                    |                    |
-                    └────────────────────┘                    |
-                                         |                    |
-                                   [Recommender] <-----------┘
-                                   (Gemma 4)
-                                         |
-                                   [Synthesizer]
-                                   (Gemma 4)
-                                         |
-                                   [Response] --> [User]
+```mermaid
+graph TB
+    subgraph BOUNDARY["🔐 System Boundary — Ubuntu 24.04 LTS Server"]
+        direction TB
+
+        subgraph APP["Streamlit Web UI :8501"]
+            UI["User Input"] --> S["sanitize_input()\nOWASP LLM01 | SI-10"]
+            S --> C["Classifier\nteam + urgency"]
+            S --> SUM["Summarizer\nissue type + summary"]
+            C --> R["Researcher\nFAISS RAG"]
+            SUM --> R
+            R --> REC["Recommender\naction steps"]
+            REC --> SYN["Synthesizer\nGemma 4 response"]
+        end
+
+        subgraph AI["AI Layer — localhost only"]
+            OL["Ollama :11434\nLLM10 — not exposed"]
+            GM["Gemma 4 8B\nlocal inference"]
+            OL --> GM
+        end
+
+        subgraph KB["Knowledge Base"]
+            FAISS[("FAISS\nVector Store\nSI-7 integrity")]
+            DOCS["SANS Policy\nDocuments"]
+            DOCS --> FAISS
+        end
+
+        subgraph SEC["Security Controls"]
+            UFW["UFW\nSC-7"]
+            AUD["auditd\nAU-2"]
+            F2B["fail2ban\nAC-7"]
+            SSD["systemd\nSC-39"]
+            SSH["SSH :2222\nIA-2"]
+        end
+
+        SYN --> OL
+        R --> FAISS
+    end
+
+    USER["👤 User / IT Staff"] -->|"HTTPS :8501"| UI
+    MAC["💻 Mac\nVS Code"] -->|"git push"| GH["GitHub\nhelp-desk-agent"]
+    GH -->|"deploy.sh"| APP
+
+    style BOUNDARY fill:#dae8fc,stroke:#0066CC,stroke-width:3px,stroke-dasharray:8 4
+    style APP fill:#fff2cc,stroke:#d6b656,stroke-width:2px
+    style AI fill:#d5e8d4,stroke:#82b366,stroke-width:2px
+    style KB fill:#d5e8d4,stroke:#82b366,stroke-width:2px
+    style SEC fill:#f8cecc,stroke:#b85450,stroke-width:2px
 ```
+
 
 ### Trust Boundaries
 
