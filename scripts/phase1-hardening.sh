@@ -6,7 +6,7 @@
 # =============================================================================
 # USAGE:
 #   1. Copy this script to your VM:
-#      scp -P 22 phase1-hardening.sh grcadmin@192.168.1.26:~/
+#      scp -P 22 phase1-hardening.sh grcadmin@<VM_IP>:~/
 #   2. Make it executable:
 #      chmod +x phase1-hardening.sh
 #   3. Run it:
