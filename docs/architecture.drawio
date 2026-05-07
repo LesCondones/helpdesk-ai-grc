@@ -1,0 +1,137 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="zKNi2B5-Z9chs9pJP389">
+    <mxGraphModel dx="1414" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" value="Help Desk AI GRC Project — System Architecture" vertex="1">
+          <mxGeometry height="40" width="800" x="300" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="server" parent="1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.cisco.sites.generic_building;html=1;dashed=1;dashPattern=8 4;strokeColor=#0066CC;strokeWidth=2;fillColor=#dae8fc;fontStyle=1;fontSize=14;verticalAlign=top;align=center;" value="Ubuntu 24.04 LTS Server (aarch64)" vertex="1">
+          <mxGeometry height="780" width="1060" x="160" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;" value="👤 User / IT Staff" vertex="1">
+          <mxGeometry height="60" width="240" x="570" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="streamlit_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;verticalAlign=top;align=center;" value="Streamlit Web UI (:8501)" vertex="1">
+          <mxGeometry height="480" width="700" x="220" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="sanitize" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1;" value="🔒 sanitize_input()&#xa;OWASP LLM01 | MITRE AML.T0051&#xa;NIST 800-53 SI-10" vertex="1">
+          <mxGeometry height="70" width="280" x="430" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ratelimit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="⏱ Rate Limiting (10s)&#xa;OWASP LLM04 | NIST SC-5" vertex="1">
+          <mxGeometry height="50" width="170" x="730" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="classifier" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Classifier&#xa;team + urgency" vertex="1">
+          <mxGeometry height="60" width="160" x="270" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="summarizer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Summarizer&#xa;issue type + summary" vertex="1">
+          <mxGeometry height="60" width="160" x="450" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="researcher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Researcher&#xa;FAISS RAG query" vertex="1">
+          <mxGeometry height="60" width="160" x="360" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="faiss" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" value="🗄 FAISS Vector Store&#xa;SANS Policy Docs&#xa;SI-7 | AML.T0020" vertex="1">
+          <mxGeometry height="90" width="150" x="560" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="recommender" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Recommender&#xa;ordered action steps" vertex="1">
+          <mxGeometry height="60" width="160" x="360" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="synthesizer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Synthesizer&#xa;final response via Gemma 4&#xa;LLM08 | LLM09 controls" vertex="1">
+          <mxGeometry height="70" width="200" x="340" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="ollama" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" value="🦙 Ollama&#xa;localhost:11434&#xa;LLM10 — not exposed" vertex="1">
+          <mxGeometry height="80" width="180" x="1000" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="gemma" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" value="🤖 Gemma 4 (8B)&#xa;Q4_K_M quantization&#xa;131K context window&#xa;Local inference only" vertex="1">
+          <mxGeometry height="90" width="200" x="990" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ufw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" value="🔥 UFW Firewall&#xa;Default deny&#xa;NIST SC-7" vertex="1">
+          <mxGeometry height="70" width="150" x="220" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="auditd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" value="📋 auditd&#xa;13 rules active&#xa;NIST AU-2, AU-12" vertex="1">
+          <mxGeometry height="70" width="150" x="390" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="fail2ban" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" value="🚫 fail2ban&#xa;maxretry=3&#xa;NIST AC-7" vertex="1">
+          <mxGeometry height="70" width="150" x="560" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="systemd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" value="⚙️ systemd&#xa;NoNewPrivileges&#xa;NIST SC-39, AC-6" vertex="1">
+          <mxGeometry height="70" width="150" x="730" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="ssh" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" value="🔑 SSH Hardening&#xa;Port 2222, Key-only&#xa;NIST IA-2, AC-17" vertex="1">
+          <mxGeometry height="70" width="150" x="900" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="unattended" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" value="🔄 Auto Updates&#xa;unattended-upgrades&#xa;NIST SI-2" vertex="1">
+          <mxGeometry height="70" width="150" x="1060" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="github" parent="1" style="shape=mxgraph.veeam.2d.github;html=1;pointerEvents=1;dashed=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=11;fontStyle=1;" value="GitHub&#xa;help-desk-agent" vertex="1">
+          <mxGeometry height="80" width="80" x="50" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="mac" parent="1" style="shape=mxgraph.cisco.computers_and_peripherals.mac;html=1;pointerEvents=1;dashed=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=11;fontStyle=1;" value="💻 Mac&#xa;VS Code" vertex="1">
+          <mxGeometry height="80" width="80" x="50" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0066CC;strokeWidth=2;" target="sanitize">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1l" connectable="0" parent="e1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="HTTPS :8501" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="sanitize" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;" target="classifier">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="sanitize" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;" target="summarizer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="classifier" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;" target="researcher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="summarizer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;" target="researcher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="researcher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82b366;dashed=1;" target="faiss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6l" connectable="0" parent="e6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="RAG query" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="researcher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;" target="recommender">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="recommender" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;" target="synthesizer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="synthesizer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82b366;dashed=1;" target="ollama">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9l" connectable="0" parent="e9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="localhost only" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="ollama" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82b366;" target="gemma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="mac" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#666666;dashed=1;" target="github">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11l" connectable="0" parent="e11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="git push" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="github" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#666666;dashed=1;" target="streamlit_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12l" connectable="0" parent="e12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="deploy.sh" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
