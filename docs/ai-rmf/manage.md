@@ -194,10 +194,10 @@ Total banned:      0
 
 ## Incident Log
 
-| Date | Incident | Severity | Response | Status |
-|---|---|---|---|---|
-| — | No incidents recorded | — | — | Clean |
-
+| Date       | Incident                                                                 | Severity | Response                                                        | Status       |
+|------------|--------------------------------------------------------------------------|----------|-----------------------------------------------------------------|--------------|
+| —          | No incidents recorded                                                    | —        | —                                                               | Clean        |
+| 2026-05-07 | Temporary UFW port 22 rule was never removed after initial SSH key setup | Medium   | Rule deleted — port 22 closed, SSH access on port 2222 only    | ✅ Resolved  |
 ---
 
 ## Control Mapping
