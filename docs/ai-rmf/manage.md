@@ -33,13 +33,13 @@ For each risk identified in MAP, a treatment decision has been made:
 | MAP-004 | FAISS deserialization | **Mitigate** | Integrity hash monitoring implemented |
 | MAP-005 | RAG poisoning | **Mitigate** | Hash verification on every load + docs in version control |
 | MAP-006 | Knowledge base integrity | **Mitigate** | FAISS hash baseline established |
-| MAP-007 | Malformed JSON output | **Accept** | `_extract_json()` provides basic recovery; low operational impact |
-| MAP-008 | Silent data corruption | **Accept** | Residual risk; Pydantic validation planned for future release |
+| MAP-007 | Malformed JSON output | **Mitigate** | Retry logic (3 attempts) + empty response detection implemented |
+| MAP-008 | Silent data corruption | **Mitigate** | Fallback defaults on all JSON-returning functions |
 | MAP-009 | Denial of service | **Mitigate** | Rate limiting implemented (10s cooldown) |
 | MAP-010 | Resource exhaustion | **Mitigate** | Rate limiting reduces Ollama overload risk |
 | MAP-011 | Hallucinated policy guidance | **Mitigate** | Synthesizer prompt enforces citation and uncertainty acknowledgment |
 | MAP-012 | Overconfident response | **Mitigate** | Escalation path added to synthesizer prompt |
-| MAP-013 | Missing embedding model | **Accept** | Low likelihood; documented as known dependency |
+| MAP-013 | Missing embedding model | **Mitigate** | Automated model availability check in deploy.sh |
 | MAP-014 | Embedding model version change | **Accept** | Low impact; rebuild vector store procedure documented |
 
 ---
