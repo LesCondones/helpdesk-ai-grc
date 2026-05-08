@@ -68,7 +68,7 @@ Phase 1 is fully automated via `scripts/phase1-hardening.sh`:
 | AC-17 | Remote Access | SSH on port 2222, ED25519 key auth |
 | AU-2 | Event Logging | auditd with 13-rule custom ruleset |
 | AU-12 | Audit Record Generation | Tracks identity, sudo, exec, network changes |
-| IA-2 | Identification & Authentication | ED25519 SSH key, no password auth |
+| IA-2 | Identification & Authentication | ED25519 SSH key, no password auth | ✅ |
 | IA-5 | Authenticator Management | Key passphrase required |
 | SC-7 | Boundary Protection | UFW default deny, explicit allow rules |
 | SC-8  | Transmission Confidentiality | Caddy reverse proxy, self-signed TLS cert | ✅ |
