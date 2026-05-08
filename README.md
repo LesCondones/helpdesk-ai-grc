@@ -71,6 +71,7 @@ Phase 1 is fully automated via `scripts/phase1-hardening.sh`:
 | IA-2 | Identification & Authentication | ED25519 SSH key, no password auth |
 | IA-5 | Authenticator Management | Key passphrase required |
 | SC-7 | Boundary Protection | UFW default deny, explicit allow rules |
+| SC-8  | Transmission Confidentiality | Caddy reverse proxy, self-signed TLS cert | ✅ |
 | SC-39 | Process Isolation | systemd NoNewPrivileges, PrivateTmp |
 
 ---

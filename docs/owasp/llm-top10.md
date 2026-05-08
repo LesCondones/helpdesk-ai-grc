@@ -166,6 +166,7 @@ if time_since_last < 10:
 - Multiple browser tabs or concurrent users bypass per-session limiting
 - No server-side shared rate limiting (Redis or file-based counter)
 - No request queuing or circuit breaker for Ollama
+- Caddy reverse proxy now provides connection-level protection in front of Streamlit
 
 ### Risk Rating
 

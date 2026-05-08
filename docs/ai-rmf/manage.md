@@ -172,7 +172,7 @@ Total banned:      0
 | Add embedding model availability check to deploy script | MAP-013 | Medium |
 | Add automated FAISS integrity check to deploy script | MAP-004 | High |
 | Remove temporary port 22 UFW rule | Infrastructure | High |
-
+| ~~Add reverse proxy (Caddy/nginx) in front of Streamlit~~ | SC-8 | ✅ Done |
 ### Medium Term
 
 | Item | Risk Addressed | Priority |
@@ -198,6 +198,7 @@ Total banned:      0
 |------------|--------------------------------------------------------------------------|----------|-----------------------------------------------------------------|--------------|
 | —          | No incidents recorded                                                    | —        | —                                                               | Clean        |
 | 2026-05-07 | Temporary UFW port 22 rule was never removed after initial SSH key setup | Medium   | Rule deleted — port 22 closed, SSH access on port 2222 only    | ✅ Resolved  |
+| 2026-05-08 | Streamlit exposed directly on port 8501 with no TLS | Medium | Caddy reverse proxy installed, TLS cert deployed, Streamlit restricted to localhost | ✅ Resolved |
 ---
 
 ## Control Mapping
