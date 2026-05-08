@@ -173,8 +173,10 @@ Full document: `docs/owasp/llm-top10.md`
 | R-006 | Sensitive data leakage | Medium | High | Local model, no external calls | ✅ Mitigated |
 | R-007 | Model theft | Low | High | Ollama localhost only | ✅ Mitigated |
 | R-008 | RAG/data poisoning | Low | High | FAISS integrity hash monitoring | ✅ Monitored |
-| R-009 | DoS via ticket flooding | Medium | High | Per-session rate limiting | 🟡 Partial |
-| R-010 | Unicode/encoded injection | Medium | Medium | Unicode normalization pending | 🔲 Planned |
+| R-009 | DoS via ticket flooding | Medium | High | Server-side rate limiting + Caddy connection limiting | ✅ Mitigated |
+| R-010 | Unicode/encoded injection | Medium | Medium | Unicode normalization + Base64 detection implemented | ✅ Mitigated |
+| R-011 | Unencrypted data in transit | Medium | High | Caddy reverse proxy with TLS (SC-8) | ✅ Mitigated |
+| R-012 | Temporary UFW port 22 left open | High | High | Port 22 closed, SSH on 2222 only | ✅ Resolved |
 
 ---
 
