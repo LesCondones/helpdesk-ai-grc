@@ -161,6 +161,25 @@ Full document: `docs/owasp/llm-top10.md`
 
 ---
 
+## 📋 Phase 5 — Hardening & Monitoring ✅
+
+### Security Hardening
+- Unicode normalization + Base64 detection in input sanitizer
+- Server-side rate limiting replacing per-session limiting
+- Sequential LangGraph pipeline — eliminates parallel Ollama conflicts
+- Retry logic + fallback defaults for JSON parsing (MAP-007, MAP-008)
+- PasswordAuthentication disabled in cloud-init SSH override
+- Port 22 permanently closed from UFW
+- Caddy reverse proxy with TLS — NIST 800-53 SC-8
+
+### Monitoring
+- Daily health check script with cron job (6am UTC)
+- Log rotation configured — weekly, 4 weeks retention
+- gemma4 removed — disk reduced from 84% to 50%
+- 7 security updates applied
+
+---
+
 ## 📊 Risk Register
 
 | ID | Risk | Likelihood | Impact | Control | Status |
