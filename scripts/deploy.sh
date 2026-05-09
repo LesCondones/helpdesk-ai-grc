@@ -27,7 +27,7 @@ uv sync
 # =============================================================================
 # Verify required Ollama models are present — MAP-013 (NIST 800-53 CP-10)
 log "Verifying required Ollama models..."
-REQUIRED_MODELS=("gemma4" "nomic-embed-text")
+REQUIRED_MODELS=("llama3.2:3b" "nomic-embed-text")
 for model in "${REQUIRED_MODELS[@]}"; do
   if ollama list | grep -q "$model"; then
     log "Model found: $model"
