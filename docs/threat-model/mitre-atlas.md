@@ -280,7 +280,7 @@ Multiple browser tabs or concurrent users can bypass per-session limiting.
 **Recommended mitigation:** Server-side rate limiting using a shared
 counter (Redis or file-based) rather than session state.
 
-**Status:** 🟡 Partially mitigated — per-session only
+**Status:** ✅ Mitigated — server-side rate limiting implemented
 
 ---
 
