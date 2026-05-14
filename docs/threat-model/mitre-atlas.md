@@ -327,7 +327,7 @@ example, instructing a user to disable security controls or share credentials.
 |---|---|---|---|---|
 | AML.T0051 Prompt Injection | ML Attack Staging | High | High | ✅ Mitigated |
 | AML.T0054 Indirect Prompt Injection | ML Attack Staging | Low | High | ✅ Mitigated |
-| AML.T0029 Denial of ML Service | Impact | Medium | High | 🟡 Partial |
+| AML.T0029 Denial of ML Service | Impact | Medium | High | ✅ Mitigated |
 | AML.T0020 Poison Training Data | Impact | Low | High | ✅ Mitigated |
 | AML.T0048 Erroneous Recommendations | Impact | Medium | High | ✅ Mitigated |
 | AML.T0015 Evade ML Model | Defense Evasion | Medium | Medium | 🟡 Partial |
