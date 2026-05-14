@@ -196,6 +196,7 @@ Full document: `docs/owasp/llm-top10.md`
 | R-010 | Unicode/encoded injection | Medium | Medium | Unicode normalization + Base64 detection implemented | ✅ Mitigated |
 | R-011 | Unencrypted data in transit | Medium | High | Caddy reverse proxy with TLS (SC-8) | ✅ Mitigated |
 | R-012 | Temporary UFW port 22 left open | High | High | Port 22 closed, SSH on 2222 only | ✅ Mitigated |
+| R-013 | GRC agent unauthorized write access | Medium | High | Agent scoped to helpdesk-ai-grc repo only, read/write limited to .md files | ✅ Mitigated |
 
 ---
 
