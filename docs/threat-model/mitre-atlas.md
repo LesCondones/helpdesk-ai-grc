@@ -212,7 +212,7 @@ def detect_encoded_injection(text: str) -> bool:
     return False
 ```
 
-**Status:** 🟡 Partially mitigated — encoding detection not yet implemented
+**Status:** ✅ Mitigated — Base64 detection implemented in sanitize_input() (Phase 5)
 
 ---
 
