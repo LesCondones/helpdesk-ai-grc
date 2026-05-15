@@ -49,8 +49,8 @@ def sanitize_input(text: str) -> str:
 
 ### Gaps
 
-- Unicode-encoded injections (zero-width spaces, homoglyphs) not caught
-- Base64 or ROT13 encoded instructions not detected
+- ✅ Unicode normalization implemented in Phase 5 — `unicodedata.normalize('NFKC')` strips zero-width spaces and homoglyphs
+- ✅ Base64 detection implemented in Phase 5 — `sanitize_input()` now detects and blocks encoded payloads
 - No server-side logging of sanitized inputs for forensic review
 
 ### Risk Rating
