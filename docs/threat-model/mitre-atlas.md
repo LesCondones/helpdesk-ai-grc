@@ -88,7 +88,7 @@ a single ticket.
 - Current: `st.caption("Powered by Ollama + LangGraph + FAISS")`
 - Recommended: `st.caption("AI-powered IT support assistant")`
 
-**Status:** 🟡 Partially mitigated — stack still disclosed in UI
+**Status:** ✅ Mitigated — technology stack disclosure removed from UI caption (app.py updated 2026-05-07)
 
 ---
 
