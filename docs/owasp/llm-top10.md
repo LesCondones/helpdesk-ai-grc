@@ -402,9 +402,9 @@ Shell access is protected by:
 | Priority | Item | Risk |
 |---|---|---|
 | High | Add server-side rate limiting | LLM04 |
-| High | Add Unicode normalization to sanitize_input() | LLM01 |
+| ✅ Done | Add Unicode normalization to sanitize_input() — implemented Phase 5 | LLM01 |
 | Medium | Add AI disclaimer to Streamlit UI | LLM09 |
-| Medium | Add Base64/encoding detection to sanitizer | LLM01 |
+| ✅ Done | Add Base64/encoding detection to sanitizer — implemented Phase 5 | LLM01 |
 | Low | Generate SBOM for dependency tracking | LLM05 |
 | Low | Add output length validation | LLM02 |
 
