@@ -132,7 +132,7 @@ Maps to **NIST 800-53 CM-3, SA-10**.
 | AML.T0054 Indirect Injection | ML Attack Staging | ✅ Mitigated |
 | AML.T0020 Data Poisoning | Impact | ✅ Mitigated |
 | AML.T0048 Erroneous Recommendations | Impact | ✅ Mitigated |
-| AML.T0029 Denial of ML Service | Impact | 🟡 Partial |
+| AML.T0029 Denial of ML Service | Impact | ✅ Mitigated |
 | AML.T0015 Evade ML Model | Defense Evasion | ✅ Mitigated |
 | AML.T0049 Obfuscated Prompts | Defense Evasion | ✅ Mitigated |
 | AML.T0000 Active Scanning | Reconnaissance | ✅ Mitigated |
