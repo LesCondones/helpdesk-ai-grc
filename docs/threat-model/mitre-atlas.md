@@ -330,7 +330,7 @@ example, instructing a user to disable security controls or share credentials.
 | AML.T0029 Denial of ML Service | Impact | Medium | High | ✅ Mitigated |
 | AML.T0020 Poison Training Data | Impact | Low | High | ✅ Mitigated |
 | AML.T0048 Erroneous Recommendations | Impact | Medium | High | ✅ Mitigated |
-| AML.T0015 Evade ML Model | Defense Evasion | Medium | Medium | 🟡 Partial |
+| AML.T0015 Evade ML Model | Defense Evasion | Medium | Medium | ✅ Mitigated |
 | AML.T0049 Obfuscated Prompts | Defense Evasion | Medium | Medium | 🟡 Partial |
 | AML.T0000 Active Scanning | Reconnaissance | High | Low | ✅ Mitigated |
 | AML.T0044 Invert ML Model | Exfiltration | Low | Low | ✅ Accepted |
