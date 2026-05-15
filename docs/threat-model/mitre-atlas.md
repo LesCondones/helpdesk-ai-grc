@@ -181,7 +181,7 @@ def sanitize_input(text: str) -> str:
     # ... existing regex patterns ...
 ```
 
-**Status:** 🟡 Partially mitigated — Unicode normalization not yet implemented
+**Status:** ✅ Mitigated — Unicode normalization implemented in sanitize_input() via unicodedata.normalize (Phase 5)
 
 ---
 
