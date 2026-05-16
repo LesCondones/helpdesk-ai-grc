@@ -190,7 +190,7 @@ return json.loads(_extract_json(response["message"]["content"]))
 **Location in code:** `app.py` — Streamlit chat input, no throttling
 
 **Risk:** Any user can submit unlimited tickets through the Streamlit UI.
-Each ticket triggers five Gemma 4 inference calls. High-volume submission
+Each ticket triggers five llama3.2:3b inference calls. High-volume submission
 could exhaust system resources and make the agent unavailable.
 
 **Identified Risks:**
