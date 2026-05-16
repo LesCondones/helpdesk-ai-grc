@@ -25,7 +25,7 @@ documents mitigations for each.
 
 | Attribute | Value |
 |---|---|
-| Model | Gemma 4 (8B parameters, Q4_K_M quantization) |
+| Model | llama3.2:3b (3B parameters, Q4_K_M quantization) |
 | Capabilities | Completion, Vision, Audio, Tools, Thinking |
 | Context length | 131,072 tokens |
 | Inference | Ollama — localhost only (127.0.0.1:11434) |
