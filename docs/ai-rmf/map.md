@@ -94,7 +94,7 @@ graph TB
 | Boundary | Description | Risk Level |
 |---|---|---|
 | User input → Pipeline | Unvalidated text from any user | High |
-| Pipeline → Gemma 4 | Prompt constructed from user input | High |
+| Pipeline → llama3.2:3b | Prompt constructed from user input | High |
 | FAISS index → Pipeline | Deserialized vector store from disk | Medium |
 | Ollama → Pipeline | JSON response parsed without schema validation | Medium |
 | Systemd → OS | Agent runs as grcadmin user | Low |
