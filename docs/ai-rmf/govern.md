@@ -176,5 +176,5 @@ IT staff may override any agent recommendation. The agent's output is advisory o
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-06 | Initial document — GOVERN function implemented | LesCondones |
+| 2026-05-06 | Initial document — GOVERN function implemented | Lester L. Artis Jr. |
 | 2026-05-06 | Synthesizer prompt updated with uncertainty acknowledgment and escalation path | LesCondones |
