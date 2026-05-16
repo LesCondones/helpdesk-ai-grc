@@ -248,7 +248,7 @@ The following risks from MAP remain open after current controls:
 | Risk ID | Risk | Status | Reason |
 |---|---|---|---|
 | MAP-007 | Pipeline crash from malformed JSON | 🟡 Partial | `_extract_json()` provides basic recovery but no schema validation |
-| MAP-008 | Silent data corruption from bad JSON | 🟡 Partial | No Pydantic schema validation implemented yet |
+| MAP-008 | Silent data corruption from bad JSON | ✅ Mitigated | Fallback defaults on all JSON-returning functions implemented in tools.py |
 | MAP-011 | Hallucinated policy guidance | 🟡 Monitored | Mitigated by synthesizer prompt but not fully eliminated |
 | MAP-013 | RAG failure from missing embedding model | 🟡 Open | No automated check for `nomic-embed-text` availability |
 
