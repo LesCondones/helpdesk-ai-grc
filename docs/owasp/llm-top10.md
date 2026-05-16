@@ -414,4 +414,4 @@ Shell access is protected by:
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-07 | Initial OWASP LLM Top 10 assessment — all 10 risks evaluated | LesCondones |
+| 2026-05-07 | Initial OWASP LLM Top 10 assessment — all 10 risks evaluated | Lester L. Artis Jr. |
