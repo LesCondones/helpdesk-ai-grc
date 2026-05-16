@@ -268,7 +268,7 @@ could be extracted.
 **Relevance:** High  
 **Description:** An attacker submits high volumes of tickets to exhaust
 Ollama inference resources, causing the agent to become unavailable.
-Each ticket triggers 5 Gemma 4 inference calls (classifier, summarizer,
+Each ticket triggers 5 llama3.2:3b inference calls (classifier, summarizer,
 researcher, recommender, synthesizer).
 
 **Mitigation implemented:** Rate limiting in `app.py` — 10 second cooldown
