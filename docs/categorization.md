@@ -123,4 +123,4 @@ These gaps are accepted risks given the non-production, portfolio nature of this
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-15 | Initial FIPS 199 categorization — NIST 800-37 Step 2 | LesCondones |
+| 2026-05-15 | Initial FIPS 199 categorization — NIST 800-37 Step 2 | Lester L. Artis Jr. |
