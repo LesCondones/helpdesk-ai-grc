@@ -16,7 +16,7 @@ The following table records the formal treatment decision for each risk identifi
 | MAP-010 | Resource exhaustion crashing Ollama | Medium | High | Mitigate | Rate limiting prevents burst inference calls to Ollama | ✅ Mitigated |
 | MAP-011 | Hallucinated policy guidance | Medium | High | Accept | Synthesizer prompt constrains model to knowledge base; residual hallucination risk accepted | 🟡 Monitored |
 | MAP-012 | Overconfident response on unknown issues | Medium | Medium | Accept | Uncertainty acknowledgment in synthesizer prompt; human escalation path present | 🟡 Monitored |
-| MAP-013 | RAG failure from missing embedding model | Low | High | Accept | No automated availability check; risk accepted pending Phase 8 health check implementation | 🟡 Open |
+| MAP-013 | RAG failure from missing embedding model | Low | High | Mitigate | Automated nomic-embed-text availability check implemented in rag.py - pulls model if missing on startup | ✅ Mitigated |
 | MAP-014 | Degraded retrieval from embedding model version change | Low | Medium | Accept | Low probability; manual re-embedding procedure documented | 🟢 Low |
 
 ---
