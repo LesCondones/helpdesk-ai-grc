@@ -21,7 +21,7 @@ The agent uses a LangGraph multi-agent pipeline with FAISS RAG over SANS securit
 **Stack:**
 - OS: Ubuntu 24.04.4 LTS (aarch64)
 - AI Framework: LangGraph + LangChain + FAISS
-- Model: Gemma 4 8B (via Ollama, local inference only)
+- Model: llama3.2:3b (via Ollama, local inference only)
 - UI: Streamlit
 - Process Manager: systemd
 - Firewall: UFW
