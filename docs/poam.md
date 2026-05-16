@@ -22,7 +22,7 @@ Each POA&M item remains open until the milestone is completed and evidence is co
 
 | Item ID | Weakness | Source | Severity | Scheduled Completion | Responsible Party | Milestone | Status |
 |---|---|---|---|---|---|---|---|
-| POA-001 | No SIEM or centralized log aggregation | SI-4 gap — `docs/categorization.md` | High | Phase 9 | LesCondones | Install and configure Wazuh | Planned |
+| POA-001 | No SIEM or centralized log aggregation | SI-4 gap — `docs/categorization.md` | High | Phase 9 | Lester L. Artis Jr. | Install and configure Wazuh | Planned |
 | POA-002 | No automated system backup schedule | CP-9 gap — `docs/categorization.md` | Medium | Phase 10 | LesCondones | Implement automated VM snapshots | Planned |
 | POA-003 | No automated incident handling | IR-4 gap — `docs/categorization.md` | Medium | Phase 9 | LesCondones | Integrate Wazuh alerting with IR procedures | Planned |
 | POA-004 | No confidence scoring on AI output | LLM09 — `docs/owasp/llm-top10.md` | Medium | Phase 7 | LesCondones | Add confidence scoring to synthesizer node | Completed |
