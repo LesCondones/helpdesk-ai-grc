@@ -185,7 +185,7 @@ introduce risks into the AI application.
 
 | Component | Source | Risk | Status |
 |---|---|---|---|
-| Gemma 4 | Google via Ollama | Pre-trained model — no training data control | ✅ Accepted |
+| llama3.2:3b | Meta via Ollama | Pre-trained model — no training data control | ✅ Accepted |
 | LangChain | PyPI via uv | Active maintenance, widely audited | ✅ Low |
 | LangGraph | PyPI via uv | Active maintenance | ✅ Low |
 | FAISS | PyPI via uv | Facebook AI Research — stable | ✅ Low |
