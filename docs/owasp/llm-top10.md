@@ -401,7 +401,7 @@ Shell access is protected by:
 
 | Priority | Item | Risk |
 |---|---|---|
-| High | Add server-side rate limiting | LLM04 |
+| ✅ Done | Add server-side rate limiting — implemented Phase 5 | LLM04 |
 | ✅ Done | Add Unicode normalization to sanitize_input() — implemented Phase 5 | LLM01 |
 | Medium | Add AI disclaimer to Streamlit UI | LLM09 |
 | ✅ Done | Add Base64/encoding detection to sanitizer — implemented Phase 5 | LLM01 |
