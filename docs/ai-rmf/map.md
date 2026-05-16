@@ -206,7 +206,7 @@ could exhaust system resources and make the agent unavailable.
 
 **Location in code:** `agent.py` → `_synthesizer_node()`
 
-**Risk:** Gemma 4 may generate plausible-sounding but factually incorrect
+**Risk:** llama3.2:3b may generate plausible-sounding but factually incorrect
 IT guidance, especially for edge cases not covered by the knowledge base.
 Users may act on incorrect advice.
 
