@@ -29,7 +29,7 @@ potential impact on the organization and its users?*
 |---|---|
 | System name | Help Desk AI Triage Agent |
 | AI type | Retrieval-Augmented Generation (RAG) + Multi-agent pipeline |
-| Model | Gemma 4 (local inference via Ollama) |
+| Model | llama3.2:3b (local inference via Ollama) |
 | Framework | LangGraph StateGraph |
 | Interface | Streamlit web UI |
 | Knowledge base | FAISS vector store over SANS policy PDFs |
