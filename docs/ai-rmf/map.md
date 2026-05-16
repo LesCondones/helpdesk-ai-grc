@@ -318,4 +318,4 @@ st.session_state.last_submission = time.time()
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-06 | Initial MAP document — all risk sources identified from code review | LesCondones |
+| 2026-05-06 | Initial MAP document — all risk sources identified from code review | Lester L. Artis Jr. |
