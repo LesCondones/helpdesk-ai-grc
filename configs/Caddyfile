@@ -1,5 +1,5 @@
 # Documentation note only — this Caddyfile is not actively deployed.
-# TLS cert regenerated on 2026-05-16; SAN updated to IP:192.168.1.28 (bridged adapter),
+# TLS cert regenerated on 2026-05-16; SAN updated to IP: <BRIDGED-IP> (bridged adapter),
 # replacing the old NAT IP. Self-signed cert generated via openssl with the updated SAN.
 
 :443 {
