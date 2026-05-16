@@ -219,4 +219,4 @@ All other MAP risks (MAP-001 through MAP-010, MAP-013) are `✅ Mitigated` or `�
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-16 | Initial SSP — System Security Plan for Help Desk AI Triage Agent | LesCondones |
+| 2026-05-16 | Initial SSP — System Security Plan for Help Desk AI Triage Agent | Lester L. Artis Jr. |
