@@ -62,7 +62,7 @@ This triggers the **NIST 800-53B Moderate Control Baseline**. Three baseline gap
 |---|---|---|
 | System Owner | Lester L. Artis Jr. | Overall accountability for the system; approves security decisions; owns risk acceptance |
 | Information System Security Officer (ISSO) | Lester L. Artis Jr. | Maintains security documentation; ensures controls are implemented and assessed; manages incident log |
-| Developer / Operator | LesCondones | Implements hardening controls; manages CI/CD pipeline; applies patches and updates |
+| Developer / Operator | Lester L. Artis Jr. | Implements hardening controls; manages CI/CD pipeline; applies patches and updates |
 | End Users | IT Staff and end users | Submit support tickets via the Streamlit UI; review AI-generated guidance before acting on it |
 
 > **Note:** GRC documentation in this repository is maintained by the automated GRC Agent operating on branch `main` of `LesCondones/helpdesk-ai-grc`, under the authorization of the System Owner.
