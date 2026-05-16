@@ -31,5 +31,6 @@ The following table records the formal treatment decision for each risk identifi
 | 2026-05-08 | PasswordAuthentication yes in 50-cloud-init.conf overriding hardening config | Medium | Fixed via sed, passwordauthentication no confirmed | ✅ Resolved |
 | 2026-05-09 | UFW port rule misconfiguration allowing external access | Medium | Rule corrected, firewall audit completed | ✅ Resolved |
 | 2026-05-14 | Completed nmap scan confirming UFW boundary protection — all non-whitelisted ports filtered. SC-7 evidence documented. | Low | nmap scan results reviewed; SC-7 boundary protection confirmed; evidence logged | ✅ Resolved |
+| 2026-05-16 | TLS certificate regenerated after network mode change from NAT to bridged — new cert issued with correct SANs for current deployment. SC-8 transmission confidentiality maintained. | Low | Certificate regenerated and trusted on client machine. | ✅ Resolved |
 
 ---
