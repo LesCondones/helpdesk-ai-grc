@@ -113,7 +113,7 @@ biases, or vulnerabilities into the model.
 
 ### Assessment
 
-This system uses **Gemma 4** — a pre-trained model from Google via
+This system uses **llama3.2:3b** — a pre-trained model from Meta via
 Ollama. The organization has no control over the base model training
 data. However, the RAG knowledge base (FAISS + SANS policy docs) is
 fully within the organization's control.
