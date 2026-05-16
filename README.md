@@ -161,6 +161,27 @@ Full document: `docs/owasp/llm-top10.md`
 
 ---
 
+## 📋 Phase 4 — RMF Categorization (NIST 800-37 Step 2) ✅
+
+### Objective
+Formally categorize the system using FIPS 199 to determine the appropriate security control baseline and establish the impact levels for confidentiality, integrity, and availability.
+
+### FIPS 199 Security Categorization
+
+| Security Objective | Impact Level | Rationale |
+|---|---|---|
+| Confidentiality | Low | No PII, no sensitive data, public SANS knowledge base, local inference only |
+| Integrity | Moderate | Incorrect guidance could cause wrong IT actions or misconfigurations |
+| Availability | Moderate | Manual fallback exists, no mission-critical dependency, no SLA defined |
+
+**Overall System Categorization: MODERATE**
+
+This triggers the **NIST 800-53B Moderate Control Baseline**. All 16 implemented controls are drawn from the Moderate baseline. Three baseline gaps (IR-4, CP-9, SI-4) are accepted risks for this non-production deployment.
+
+Full document: `docs/categorization.md`
+
+---
+
 ## 📋 Phase 5 — Hardening & Monitoring ✅
 
 ### Security Hardening
