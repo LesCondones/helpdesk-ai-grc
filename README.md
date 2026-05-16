@@ -281,7 +281,7 @@ ssh -p 22 grcadmin@YOUR_VM_IP "chmod +x phase1-hardening.sh && sudo ./phase1-har
 # On the VM
 curl -LsSf https://astral.sh/uv/install.sh | sh
 curl -fsSL https://ollama.com/install.sh | sh
-ollama pull gemma4
+ollama pull llama3.2:3b
 git clone https://github.com/LesCondones/help-desk-agent.git ~/helpdesk-agent
 cd ~/helpdesk-agent && uv sync
 sudo systemctl enable helpdesk-agent && sudo systemctl start helpdesk-agent
