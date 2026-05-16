@@ -213,6 +213,32 @@ Full document: `docs/categorization.md`
 
 ---
 
+## 📋 Phase 11 — Red Team Engagement ✅
+
+### Methodology
+Internal penetration test conducted from a Kali Linux attack machine against the help desk agent server using black box testing methodology.
+
+### Tools Used
+nmap, testssl, hydra, nikto, manual prompt injection
+
+### Results
+- 0 Critical findings
+- 0 High findings
+- 3 Medium findings
+- 4 Low findings
+- 6 Positive control validations
+
+### Key Validations
+- UFW boundary protection confirmed — 65,531 ports filtered
+- SSH hardening confirmed — password auth and weak key types blocked
+- TLS configuration strong — no legacy protocols, no CVEs
+- Unicode encoded injection blocked — Phase 5 fix confirmed
+- Authority impersonation blocked
+
+Full report: `docs/pentest-report.md`
+
+---
+
 ## 📊 Risk Register
 
 | ID | Risk | Likelihood | Impact | Control | Status |
