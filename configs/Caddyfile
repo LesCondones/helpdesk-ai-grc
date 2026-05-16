@@ -1,3 +1,7 @@
+# Documentation note only — this Caddyfile is not actively deployed.
+# TLS cert regenerated on 2026-05-16; SAN updated to IP:192.168.1.28 (bridged adapter),
+# replacing the old NAT IP. Self-signed cert generated via openssl with the updated SAN.
+
 :443 {
 	tls /etc/caddy/cert.pem /etc/caddy/key.pem
 	reverse_proxy localhost:8501
