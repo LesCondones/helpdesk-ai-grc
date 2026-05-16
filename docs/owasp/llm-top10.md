@@ -143,7 +143,7 @@ causing degraded performance or complete unavailability.
 
 ### Attack Vectors for This System
 
-Each ticket submission triggers **5 Gemma 4 inference calls**:
+Each ticket submission triggers **5 llama3.2:3b inference calls**:
 classifier + summarizer (parallel) → researcher → recommender → synthesizer.
 
 With an 8B parameter model at Q4_K_M quantization, each inference
