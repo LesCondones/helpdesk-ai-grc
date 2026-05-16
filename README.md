@@ -346,6 +346,6 @@ ssh helpdesk-ai-server "~/deploy.sh"
 
 ## 👤 Author
 
-**LesCondones**  
+**Lester L. Artis Jr.**  
 GRC Engineering Project | 2026  
 [GitHub](https://github.com/LesCondones)
