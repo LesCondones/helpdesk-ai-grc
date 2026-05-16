@@ -26,7 +26,7 @@ Each POA&M item remains open until the milestone is completed and evidence is co
 | POA-002 | No automated system backup schedule | CP-9 gap — `docs/categorization.md` | Medium | Phase 10 | Lester L. Artis Jr. | Implement automated VM snapshots | Planned |
 | POA-003 | No automated incident handling | IR-4 gap — `docs/categorization.md` | Medium | Phase 9 | Lester L. Artis Jr. | Integrate Wazuh alerting with IR procedures | Planned |
 | POA-004 | No confidence scoring on AI output | LLM09 — `docs/owasp/llm-top10.md` | Medium | Phase 7 | Lester L. Artis Jr. | Add confidence scoring to synthesizer node | Completed |
-| POA-005 | No server-side input logging for sanitized inputs | LLM01, AU-2 — `docs/ai-rmf/map.md` | Medium | Phase 7 | LesCondones | Add rotating file logger for sanitized inputs | Completed |
+| POA-005 | No server-side input logging for sanitized inputs | LLM01, AU-2 — `docs/ai-rmf/map.md` | Medium | Phase 7 | Lester L. Artis Jr. | Add rotating file logger for sanitized inputs | Completed |
 | POA-006 | No SBOM for dependency tracking | LLM05, SA-12 — `docs/owasp/llm-top10.md` | Low | Phase 10 | LesCondones | Generate SBOM via `uv export` | Planned |
 | POA-007 | No output length validation on LLM responses | LLM02 — `docs/owasp/llm-top10.md` | Low | Phase 7 | LesCondones | Add output truncation in Streamlit | Planned |
 
