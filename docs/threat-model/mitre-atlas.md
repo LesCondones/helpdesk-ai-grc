@@ -380,4 +380,4 @@ to prevent multi-tab bypass.
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-07 | Initial MITRE ATLAS threat model — 10 techniques assessed | LesCondones |
+| 2026-05-07 | Initial MITRE ATLAS threat model — 10 techniques assessed | Lester L. Artis Jr. |
