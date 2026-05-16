@@ -201,6 +201,18 @@ Full document: `docs/categorization.md`
 
 ---
 
+## 📋 Phase 8 — GRC Deliverables ✅
+
+### Documents Produced
+
+| Document | Purpose | Location |
+|---|---|---|
+| System Security Plan (SSP) | Authoritative reference for system security posture, controls, and roles | `docs/ssp.md` |
+| Plan of Action & Milestones (POA&M) | Tracks residual risks and planned mitigations with completion targets | `docs/poam.md` |
+| FIPS 199 Categorization | Formal system categorization — Overall: Moderate | `docs/categorization.md` |
+
+---
+
 ## 📊 Risk Register
 
 | ID | Risk | Likelihood | Impact | Control | Status |
