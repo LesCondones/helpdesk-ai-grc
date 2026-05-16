@@ -88,4 +88,4 @@ Each POA&M item remains open until the milestone is completed and evidence is co
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-16 | Initial POA&M — 7 items across SI-4, CP-9, IR-4 gaps and LLM Top 10 findings | LesCondones |
+| 2026-05-16 | Initial POA&M — 7 items across SI-4, CP-9, IR-4 gaps and LLM Top 10 findings | Lester L. Artis Jr. |
