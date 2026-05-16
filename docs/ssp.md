@@ -60,7 +60,7 @@ This triggers the **NIST 800-53B Moderate Control Baseline**. Three baseline gap
 
 | Role | Individual | Responsibilities |
 |---|---|---|
-| System Owner | LesCondones | Overall accountability for the system; approves security decisions; owns risk acceptance |
+| System Owner | Lester L. Artis Jr. | Overall accountability for the system; approves security decisions; owns risk acceptance |
 | Information System Security Officer (ISSO) | LesCondones | Maintains security documentation; ensures controls are implemented and assessed; manages incident log |
 | Developer / Operator | LesCondones | Implements hardening controls; manages CI/CD pipeline; applies patches and updates |
 | End Users | IT Staff and end users | Submit support tickets via the Streamlit UI; review AI-generated guidance before acting on it |
