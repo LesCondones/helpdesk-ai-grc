@@ -274,4 +274,4 @@ The following risks from MAP remain open after current controls:
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-05-07 | Initial MEASURE document with live test evidence | LesCondones |
+| 2026-05-07 | Initial MEASURE document with live test evidence | Lester L. Artis Jr. |
