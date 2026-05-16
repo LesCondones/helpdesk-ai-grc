@@ -93,7 +93,7 @@ START ─┬─> classifier  (team + urgency)
                 │
            recommender (ordered action steps)
                 │
-           synthesizer (final structured response via Gemma 4)
+           synthesizer (final structured response via llama3.2:3b)
                 │
                END
 ```
