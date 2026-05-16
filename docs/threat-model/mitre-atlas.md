@@ -246,7 +246,7 @@ Synthesizer prompt instructs the agent to cite rather than quote extensively.
 #### AML.T0057 — LLM Data Leakage
 **Relevance:** Medium  
 **Description:** The model reveals information from its training data or
-context window that should not be disclosed. Gemma 4 has a 131,072 token
+context window that should not be disclosed. llama3.2:3b has a 128,000 token
 context window — if sensitive data were ever included in the context, it
 could be extracted.
 
