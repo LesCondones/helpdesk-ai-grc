@@ -1,0 +1,16 @@
+:443 {
+	tls /etc/caddy/cert.pem /etc/caddy/key.pem
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Frame-Options "DENY"
+		X-Content-Type-Options "nosniff"
+		-Server
+	}
+
+	reverse_proxy localhost:8501
+}
+
+:80 {
+	redir https://{host}{uri} permanent
+}
