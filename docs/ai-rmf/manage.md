@@ -32,6 +32,8 @@ The following table records the formal treatment decision for each risk identifi
 | 2026-05-09 | UFW port rule misconfiguration allowing external access | Medium | Rule corrected, firewall audit completed | ✅ Resolved |
 | 2026-05-14 | Completed nmap scan confirming UFW boundary protection — all non-whitelisted ports filtered. SC-7 evidence documented. | Low | nmap scan results reviewed; SC-7 boundary protection confirmed; evidence logged | ✅ Resolved |
 | 2026-05-16 | TLS certificate regenerated after network mode change from NAT to bridged — new cert issued with correct SANs for current deployment. SC-8 transmission confidentiality maintained. | Low | Certificate regenerated and trusted on client machine. | ✅ Resolved |
+| 2026-05-17 | DAN persona adoption and knowledge base disclosure vulnerabilities identified in pentest and remediated — sanitize_input() and synthesizer prompt updated. | Medium | DAN patterns added, synthesizer prompt hardened. | ✅ Resolved |
+| 2026-05-18 | Pentest findings F-001, F-004, F-005 remediated — HSTS, X-Frame-Options, X-Content-Type-Options headers added to Caddyfile, server version header stripped. | Low | Caddyfile updated. | ✅ Resolved |
 | 2026-05-19 | Pentest findings F-001, F-004, F-005 remediated — security headers added to Caddyfile, server version header stripped. | Low | Caddyfile updated with header block. | ✅ Resolved |
 
 ---
