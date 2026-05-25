@@ -22,6 +22,7 @@
 | Authorization Boundary | Single Ubuntu 24.04 LTS VM running: Streamlit web UI (HTTPS via Caddy), LangGraph multi-agent pipeline, Ollama local inference engine, FAISS vector store over SANS policy documents. No data crosses the VM boundary. |
 | Data Types | IT support ticket text (free-form, no PII required); SANS policy documents (publicly available). No personally identifiable information, credentials, or classified data is processed. |
 | External Dependencies | None. All model inference is local via Ollama. No external APIs. No cloud services. No data is transmitted externally. Source code is pulled from GitHub at deployment time only. |
+| Operational Status | Prototype / Portfolio — NOT approved for production use. Not authorized to process CUI, PII, or classified data. |
 
 ---
 
@@ -204,6 +205,7 @@ All other MAP risks (MAP-001 through MAP-010, MAP-013) are `✅ Mitigated` or `�
 | AI RMF — Manage | `docs/ai-rmf/manage.md` | Risk treatment decisions for all 14 MAP risks; incident log; accepted residual risks |
 | OWASP LLM Top 10 Assessment | `docs/owasp/llm-top10.md` | Detailed per-item OWASP LLM vulnerability assessment with mitigations |
 | MITRE ATLAS Threat Model | `docs/threat-model/mitre-atlas.md` | Adversarial ML threat model; 10 techniques across 5 tactics |
+| Control Traceability Matrix | `docs/ctm.md` | All 287 Moderate baseline controls with implemented/N/A/POA&M status and justifications |
 | Phase 1 Hardening Script | `scripts/phase1-hardening.sh` | Automated OS hardening — SSH, UFW, auditd, fail2ban, unattended-upgrades |
 | CI/CD Deploy Script | `scripts/deploy.sh` | Automated deployment pipeline via SSH from developer workstation |
 | Daily Health Check | `scripts/daily-health-check.sh` | Cron-based daily system health verification script |
@@ -215,8 +217,62 @@ All other MAP risks (MAP-001 through MAP-010, MAP-013) are `✅ Mitigated` or `�
 
 ---
 
+## Known Limitations
+
+- **Segregation of Duties (AC-5):** System Owner, ISSO, and Developer roles are held by the same individual. In a production environment these roles must be separated. The ISSO cannot be the same person as the Developer.
+- **Tailored Baseline (PL-2):** 16 of 287 Moderate baseline controls are explicitly implemented. All remaining controls are documented in `docs/ctm.md` as either Not Applicable with justification or on the POA&M.
+- **CUI Data Spillage (SC-7/SI-3):** No formal CUI spillage procedure exists beyond Rules of Behavior prohibiting PII/CUI input. In production a formal data spillage IR procedure would be required.
+- **Backup and Recovery (CP-9):** Automated backup schedule not yet implemented. Manual VM snapshots taken at major milestones. Automated backup is planned in POA&M POA-002.
+
+---
+
+## Section 12 — Continuous Monitoring Plan
+
+| Activity | Frequency | Method | Responsible Party | Evidence |
+|---|---|---|---|---|
+| Vulnerability scanning | Monthly | nmap port scan | Lester L. Artis Jr. | Scan output saved to /var/log |
+| Audit log review | Weekly | Manual review of auditd and fail2ban logs | Lester L. Artis Jr. | Log review notes |
+| Health check review | Daily (automated) | daily-health-check.sh via cron | Automated | /var/log/helpdesk-health-*.log |
+| SIEM log review | Weekly | Grafana + Loki dashboard review | Lester L. Artis Jr. | Grafana dashboard screenshots |
+| FAISS integrity check | Every deploy | SHA256 hash verification in deploy.sh | Automated | Deploy log |
+| Security updates | As available | unattended-upgrades | Automated | apt log |
+| Control re-assessment | Annual or upon major architecture change | SSP review | Lester L. Artis Jr. | Updated SSP revision history |
+| Penetration testing | Annual | Internal red team engagement | Lester L. Artis Jr. | docs/pentest-report.md |
+
+---
+
+## Appendix A — Rules of Behavior
+
+All users and administrators of this system must comply with the following rules:
+
+### User Rules
+1. Users shall not input Classified, Secret, Top Secret, or CUI data into ticket submissions
+2. Users shall not input Personally Identifiable Information (PII) including names, SSNs, addresses, or financial data
+3. Users shall verify all AI-generated guidance against official SANS policy documents before taking action
+4. Users shall report any unexpected or concerning AI responses to the system administrator immediately
+5. Users shall not attempt to manipulate, jailbreak, or bypass AI safety controls
+
+### Administrator Rules
+1. Administrators shall not bypass or disable input sanitization controls in sanitize_input()
+2. Administrators shall not modify SYNTHESIZER_PROMPT or FOLLOWUP_PROMPT to remove safety instructions
+3. Administrators shall not expose Ollama inference endpoint beyond localhost
+4. Administrators shall review audit logs weekly per the Continuous Monitoring Plan
+5. Administrators shall apply security updates within 30 days of release
+6. All configuration changes must be committed to GitHub with descriptive commit messages per CM-3
+
+### AI-Specific Rules
+1. No user shall attempt prompt injection, jailbreaking, or persona hijacking attacks against the agent
+2. The agent shall not be used as the sole basis for security decisions without human review
+3. Agent outputs shall be treated as advisory only — human IT staff must verify before acting
+
+### Acknowledgment
+All users acknowledge these rules upon system access via the SSH legal notice banner (AC-8).
+
+---
+
 ## 11. Revision History
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-05-16 | Initial SSP — System Security Plan for Help Desk AI Triage Agent | Lester L. Artis Jr. |
+| 2026-05-25 | Added Operational Status row to System Identification; added Known Limitations section; added Section 12 — Continuous Monitoring Plan; added Appendix A — Rules of Behavior; added CTM reference to Related Documents (per SCA findings) | Lester L. Artis Jr. |
