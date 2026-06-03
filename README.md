@@ -154,7 +154,7 @@ Full document: `docs/threat-model/mitre-atlas.md`
 | LLM06 | Sensitive Information Disclosure | 🟢 Low — local model, no PII |
 | LLM07 | Insecure Plugin Design | 🟢 Low — no plugins |
 | LLM08 | Excessive Agency | 🟢 Low — advisory only, human oversight |
-| LLM09 | Overreliance | 🟡 Medium — disclaimer added, no confidence scoring |
+| LLM09 | Overreliance | 🟢 Low — disclaimer ✅ implemented, confidence scoring ✅ implemented Phase 7 |
 | LLM10 | Model Theft | 🟢 Low — Ollama localhost only |
 
 Full document: `docs/owasp/llm-top10.md`
