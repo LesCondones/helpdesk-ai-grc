@@ -328,7 +328,7 @@ hallucinated or incorrect information.
 
 ### Gaps
 
-- No confidence scoring on responses
+- ✅ Confidence scoring implemented Phase 7 — High/Medium/Low badge displayed with each response in app.py
 - ✅ AI disclaimer implemented — st.info() banner added to app.py confirming AI-generated guidance requires verification
 
 ### Recommended addition to `app.py`:
