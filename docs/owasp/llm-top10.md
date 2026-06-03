@@ -329,8 +329,7 @@ hallucinated or incorrect information.
 ### Gaps
 
 - No confidence scoring on responses
-- No explicit disclaimer in the UI that responses are AI-generated
-  and should be verified
+- ✅ AI disclaimer implemented — st.info() banner added to app.py confirming AI-generated guidance requires verification
 
 ### Recommended addition to `app.py`:
 ```python
