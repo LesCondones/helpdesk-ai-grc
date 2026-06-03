@@ -51,7 +51,7 @@ def sanitize_input(text: str) -> str:
 
 - ✅ Unicode normalization implemented in Phase 5 — `unicodedata.normalize('NFKC')` strips zero-width spaces and homoglyphs
 - ✅ Base64 detection implemented in Phase 5 — `sanitize_input()` now detects and blocks encoded payloads
-- No server-side logging of sanitized inputs for forensic review
+- ✅ Server-side logging implemented — rotating file logger active at logs/inputs.log (AU-12, LLM01)
 
 ### Risk Rating
 
