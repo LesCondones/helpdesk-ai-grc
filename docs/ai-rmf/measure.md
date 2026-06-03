@@ -266,7 +266,7 @@ The following risks from MAP remain open after current controls:
 | MAP-010 | Resource exhaustion | Rate limiting | ✅ Implemented |
 | MAP-007 | Malformed JSON | Pydantic validation + retry | ✅ Mitigated |
 | MAP-011 | Hallucination | Prompt engineering | 🟡 Residual risk |
-| MAP-013 | Missing embedding model | None | 🟡 Open |
+| MAP-013 | Missing embedding model | ensure_embedding_model() in rag.py | ✅ Mitigated |
 
 ---
 
