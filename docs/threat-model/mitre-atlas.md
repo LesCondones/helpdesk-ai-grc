@@ -274,11 +274,7 @@ researcher, recommender, synthesizer).
 **Mitigation implemented:** Rate limiting in `app.py` — 10 second cooldown
 between submissions per session.
 
-**Remaining gap:** Rate limiting is per-session (Streamlit session state).
-Multiple browser tabs or concurrent users can bypass per-session limiting.
-
-**Recommended mitigation:** Server-side rate limiting using a shared
-counter (Redis or file-based) rather than session state.
+✅ Resolved — Server-side rate limiting implemented in Phase 5 using file-based shared counter. Per-session limiting replaced.
 
 **Status:** ✅ Mitigated — server-side rate limiting implemented
 
