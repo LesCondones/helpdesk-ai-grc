@@ -146,7 +146,7 @@ Full document: `docs/threat-model/mitre-atlas.md`
 
 | # | Risk | Status |
 |---|---|---|
-| LLM01 | Prompt Injection | 🟡 Medium — sanitizer implemented, gaps remain |
+| LLM01 | Prompt Injection | 🟡 Medium — sanitizer implemented, server-side logging ✅ implemented |
 | LLM02 | Insecure Output Handling | 🟢 Low — Streamlit markdown sanitizes HTML |
 | LLM03 | Training Data Poisoning | 🟢 Low — FAISS integrity monitoring active |
 | LLM04 | Model Denial of Service | 🟡 Medium — rate limiting ✅ implemented, circuit breaker 🔲 planned |
