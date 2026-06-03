@@ -164,7 +164,7 @@ if time_since_last < 10:
 
 - ✅ Server-side rate limiting implemented in Phase 5 — shared counter replaces per-session Streamlit session state
 - ✅ Caddy reverse proxy provides connection-level protection in front of Streamlit
-- Rate limiting ✅ implemented. Circuit breaker 🔲 planned — POA&M POA-003
+- Rate limiting ✅ implemented. Circuit breaker 🔲 planned — POA&M POA-003 (LLM04)
 
 ### Risk Rating
 
