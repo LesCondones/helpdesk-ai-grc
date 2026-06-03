@@ -63,7 +63,7 @@ Each POA&M item remains open until the milestone is completed and evidence is co
 - **Evidence:** Phase 7 commit history in `help-desk-agent` repository
 
 #### POA-005 — No Server-Side Input Logging ✅
-- **Control Gap:** LLM01 (Prompt Injection), AU-2 (Event Logging) — sanitized inputs not logged for forensic review
+- **Control Gap:** LLM01 (Prompt Injection), AU-2 (Event Logging) — ✅ Resolved — server-side rotating file logger implemented at logs/inputs.log. Logs session_id, timestamp, original_len, sanitized_len, patterns_stripped.
 - **Current State (at identification):** `sanitize_input()` stripped injection patterns but did not log the original or sanitized input
 - **Mitigation Implemented:** Rotating file logger added for sanitized inputs in Phase 7; logs retained per AU-12 requirements
 - **Evidence:** Phase 7 commit history in `help-desk-agent` repository
