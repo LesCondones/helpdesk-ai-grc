@@ -130,7 +130,7 @@
 | IR-1 | Incident Response Policy | N/A | Single-person portfolio project. |
 | IR-2 | Incident Response Training | N/A | No end users to train. |
 | IR-3 | Incident Response Testing | N/A | No formal IR testing conducted. |
-| IR-4 | Incident Handling | ⚠️ Partial | Manual incident response plan documented in docs/ai-rmf/manage.md. Grafana+Loki alerting planned. POA&M POA-003. |
+| IR-4 | Incident Handling | ⚠️ Partial | Manual IR plan in docs/ai-rmf/manage.md. Grafana+Loki alerting not yet configured. POA&M POA-003 (IR-4 automated handling). Note: POA-003 also referenced for Ollama circuit breaker under LLM04. |
 | IR-5 | Incident Monitoring | ✅ Implemented | fail2ban monitors SSH. Grafana+Loki SIEM active for centralized log monitoring. Daily health check monitors all services. |
 | IR-6 | Incident Reporting | N/A | No organizational reporting chain. Portfolio project. |
 | IR-7 | Incident Response Assistance | N/A | No external IR assistance required. |
