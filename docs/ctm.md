@@ -329,8 +329,8 @@
 
 | Status | Count |
 |---|---|
-| ✅ Implemented | 38 |
-| ⚠️ Partial | 18 |
+| ✅ Implemented | 35 |
+| ⚠️ Partial | 21 |
 | 🔲 POA&M | 2 |
 | N/A | 229 |
 | **Total** | **287** |
