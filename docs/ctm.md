@@ -232,7 +232,7 @@
 | PM-28 | Risk Framing | ✅ Implemented | Risk framing documented via NIST AI RMF MAP function. Evidence: docs/ai-rmf/map.md |
 | PM-29 | Risk Management Program Leadership Roles | N/A | Single-person project. |
 | PM-30 | Supply Chain Risk Management Strategy | N/A | No supply chain program. Dependencies managed via uv.lock. |
-| PM-31 | Continuous Monitoring Strategy | ✅ Implemented | Continuous monitoring strategy documented in docs/ssp.md Section 12. Daily health check and Grafana+Loki SIEM active. |
+| PM-31 | Continuous Monitoring Strategy | ✅ Implemented | Continuous monitoring strategy documented in docs/ssp.md Section 12. Daily health check, auditd, and fail2ban active. |
 | PM-32 | Purposing | N/A | No enterprise purposing program. |
 
 ## Risk Assessment (RA)
