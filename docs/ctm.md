@@ -58,7 +58,7 @@
 | AU-4 | Audit Log Storage Capacity | ✅ Implemented | Log rotation configured. Weekly rotation, 4-week retention. Evidence: configs/logrotate-helpdesk |
 | AU-5 | Response to Audit Logging Process Failures | N/A | No automated alerting on audit failure. Accepted for portfolio project. |
 | AU-6 | Audit Record Review | ⚠️ Partial | Daily health check reviews fail2ban and auditd. Manual log review per host. No centralized SIEM aggregation. |
-| AU-7 | Audit Record Reduction and Report Generation | ⚠️ Partial | Grafana+Loki provides log aggregation and visualization. No automated report generation. |
+| AU-7 | Audit Record Reduction and Report Generation | ⚠️ Partial | No automated report generation or centralized log aggregation. Manual review of individual log files. |
 | AU-8 | Time Stamps | ✅ Implemented | System time synchronized. auditd records UTC timestamps. |
 | AU-9 | Protection of Audit Information | ✅ Implemented | auditd logs in /var/log protected by filesystem permissions. systemd ProtectSystem restricts write access. |
 | AU-10 | Non-Repudiation | N/A | No digital signature or non-repudiation requirements for this system. |
