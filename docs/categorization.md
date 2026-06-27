@@ -101,7 +101,7 @@ A Moderate system categorization triggers the **NIST 800-53B Moderate Control Ba
 |---|---|---|
 | IR-4 | Incident Handling | Manual incident response documented in manage.md; no automated IR tooling |
 | CP-9 | System Backup | VM snapshots taken at major milestones; no automated backup schedule |
-| SI-4 | System Monitoring | Grafana + Loki SIEM deployed Phase 9 — centralized log aggregation active |
+| SI-4 | System Monitoring | System monitoring via daily automated health check (cron), auditd event logging, and fail2ban. No centralized SIEM; logs reviewed manually per host. |
 
 These gaps are accepted risks given the non-production, portfolio nature of this deployment and are documented in docs/ai-rmf/manage.md.
 
