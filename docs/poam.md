@@ -36,9 +36,11 @@ Each POA&M item remains open until the milestone is completed and evidence is co
 
 #### POA-001 — No SIEM or Centralized Log Aggregation
 - **Control Gap:** SI-4 (System Monitoring) — Moderate baseline requires active monitoring and alerting
-- **Current State:** Daily health check script (`scripts/daily-health-check.sh`) runs via cron; auditd logs written locally; no centralized aggregation or real-time alerting
-- **Risk:** Security events (brute-force escalation, file integrity changes, anomalous access) may go undetected between daily health checks
-- **Planned Mitigation:** Deploy Wazuh agent on the Ubuntu VM with centralized dashboard; configure alerts for auditd events, fail2ban triggers, and file integrity changes
+- **Status:** Open / Planned — reopened June 2026
+- **History:** Grafana + Loki SIEM was deployed in Phase 9 with a 6-panel dashboard monitoring auditd, auth, fail2ban, helpdesk-agent, health-check, and syslog. The stack was removed during the June 2026 system rebuild following disk corruption to reduce resource overhead on the rebuilt VM.
+- **Current State:** Daily health check script (`scripts/daily-health-check.sh`) runs via cron; auditd logs written locally; fail2ban monitors SSH. No centralized aggregation or real-time alerting. Logs reviewed manually per host.
+- **Risk:** Security events (brute-force escalation, file integrity changes, anomalous access) may go undetected between daily health checks. Risk level increased versus prior Phase 9 state.
+- **Planned Mitigation:** Reinstate centralized log aggregation in a future phase (Grafana+Loki or equivalent). Interim controls: daily health check, auditd, fail2ban.
 - **Mapped Risks:** R-002, MAP-011
 
 #### POA-002 — No Automated System Backup Schedule
