@@ -74,7 +74,7 @@
 | CA-3 | Information Exchange | N/A | No interconnections with external systems. GitHub used for CI/CD only. |
 | CA-5 | Plan of Action and Milestones | ✅ Implemented | POA&M documented in docs/poam.md covering 7 items. |
 | CA-6 | Authorization | N/A | No formal ATO process. Portfolio project in prototype state. Documented in docs/ssp.md. |
-| CA-7 | Continuous Monitoring | ✅ Implemented | Daily health check script via cron. Grafana+Loki SIEM active. Weekly manual log review per SSP Section 12. Evidence: scripts/daily-health-check.sh |
+| CA-7 | Continuous Monitoring | ⚠️ Partial | Daily health check script via cron, auditd, and fail2ban provide ongoing monitoring. Manual log review. No centralized SIEM. Evidence: daily-health-check.sh |
 | CA-8 | Penetration Testing | ✅ Implemented | Internal penetration test conducted Phase 11. Evidence: docs/pentest-report.md |
 | CA-9 | Internal System Connections | N/A | No internal system connections beyond localhost. |
 
