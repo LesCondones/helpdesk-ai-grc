@@ -298,7 +298,7 @@
 | SI-1 | Policy and Procedures | N/A | Single-person project. |
 | SI-2 | Flaw Remediation | ✅ Implemented | unattended-upgrades enabled. Security updates applied regularly. Evidence: README.md Phase 5 monitoring section |
 | SI-3 | Malicious Code Protection | ⚠️ Partial | No antivirus/EDR installed. sanitize_input() protects against prompt injection and DAN patterns. UFW limits attack surface. CUI spillage procedure in SSP Rules of Behavior. |
-| SI-4 | System Monitoring | ✅ Implemented | Grafana+Loki SIEM active. Daily health check via cron. auditd event monitoring. fail2ban active monitoring. POA&M POA-001 closed. Evidence: Grafana dashboard. |
+| SI-4 | System Monitoring | ⚠️ Partial | Daily health check via cron, auditd event monitoring, fail2ban active monitoring. No centralized SIEM. POA&M POA-001 tracks reinstatement. |
 | SI-5 | Security Alerts and Advisories | N/A | No formal security advisory subscription. unattended-upgrades handles OS patches. |
 | SI-6 | Security and Privacy Function Verification | N/A | No automated function verification. Manual testing conducted. |
 | SI-7 | Software Firmware and Information Integrity | ✅ Implemented | FAISS vector store SHA256 integrity monitoring. GitHub version control for all code. Evidence: scripts/deploy.sh |
