@@ -140,7 +140,7 @@ All 16 controls are drawn from the NIST 800-53B Moderate baseline. Implementatio
 |---|---|---|
 | IR-4 | Incident Handling | Manual incident response documented in `docs/ai-rmf/manage.md`; no automated IR tooling deployed |
 | CP-9 | System Backup | VM snapshots taken at major milestones; no automated backup schedule |
-| SI-4 | System Monitoring | ✅ Implemented — Grafana + Loki SIEM deployed Phase 9. Dashboard monitors auditd, auth, fail2ban, helpdesk-agent, health-check, and syslog. Evidence: docs/poam.md POA-001 closed. |
+| SI-4 | System Monitoring | ⚠️ Partial — System monitoring via daily health check (cron), auditd, and fail2ban. Centralized SIEM (Grafana+Loki) was deployed in Phase 9 but removed during the June 2026 rebuild following disk corruption; reinstatement tracked under POA-001. |
 
 These gaps are accepted risks for this non-production, portfolio-scope deployment and are documented in `docs/ai-rmf/manage.md`.
 
