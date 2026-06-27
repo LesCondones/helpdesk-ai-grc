@@ -22,7 +22,7 @@ Each POA&M item remains open until the milestone is completed and evidence is co
 
 | Item ID | Weakness | Source | Severity | Scheduled Completion | Responsible Party | Milestone | Status |
 |---|---|---|---|---|---|---|---|
-| POA-001 | No SIEM or centralized log aggregation | SI-4 gap — `docs/categorization.md` | High | Phase 9 | Lester L. Artis Jr. | Grafana + Loki SIEM deployed Phase 9 — dashboard active with 6 panels monitoring auditd, auth, fail2ban, helpdesk-agent, health-check, syslog | ✅ Completed |
+| POA-001 | No SIEM or centralized log aggregation | SI-4 gap — `docs/categorization.md` | High | TBD | Lester L. Artis Jr. | SIEM (Grafana+Loki) was deployed in Phase 9 and subsequently removed during the June 2026 rebuild following disk corruption to reduce resource overhead. Centralized log aggregation is not currently in place. Interim monitoring: daily health check, auditd, fail2ban. Reinstatement planned. | Open / Planned |
 | POA-002 | No automated system backup schedule | CP-9 gap — `docs/categorization.md` | Medium | Phase 10 | Lester L. Artis Jr. | Implement automated VM snapshots | Planned |
 | POA-003 | No automated incident handling | IR-4 gap — `docs/categorization.md` | Medium | Phase 9 | Lester L. Artis Jr. | Integrate Wazuh alerting with IR procedures | Planned |
 | POA-004 | No confidence scoring on AI output | LLM09 — `docs/owasp/llm-top10.md` | Medium | Phase 7 | Lester L. Artis Jr. | Add confidence scoring to synthesizer node | Completed |
