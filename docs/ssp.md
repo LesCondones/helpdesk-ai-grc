@@ -233,7 +233,7 @@ All other MAP risks (MAP-001 through MAP-010, MAP-013) are `âœ… Mitigated` or `â
 | Vulnerability scanning | Monthly | nmap port scan | Lester L. Artis Jr. | Scan output saved to /var/log |
 | Audit log review | Weekly | Manual review of auditd and fail2ban logs | Lester L. Artis Jr. | Log review notes |
 | Health check review | Daily (automated) | daily-health-check.sh via cron | Automated | /var/log/helpdesk-health-*.log |
-| SIEM log review | Weekly | Grafana + Loki dashboard review | Lester L. Artis Jr. | Grafana dashboard screenshots |
+| Host log review | Weekly | Manual review of auth.log, fail2ban.log, audit.log, and daily health reports | Lester L. Artis Jr. | Health check log archives |
 | FAISS integrity check | Every deploy | SHA256 hash verification in deploy.sh | Automated | Deploy log |
 | Security updates | As available | unattended-upgrades | Automated | apt log |
 | Control re-assessment | Annual or upon major architecture change | SSP review | Lester L. Artis Jr. | Updated SSP revision history |
